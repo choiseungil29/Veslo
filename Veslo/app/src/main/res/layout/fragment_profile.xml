@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.clogic.veslo.View.ProfileView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.3"
+        android:background="@color/main_purple"/>
+
+    <com.clogic.veslo.View.Tab.TabHost
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <com.clogic.veslo.View.Tab.TabButton
+            style="@style/TabButton" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/main_purple"/>
+
+        <com.clogic.veslo.View.Tab.TabButton
+            style="@style/TabButton" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/main_purple"/>
+
+        <com.clogic.veslo.View.Tab.TabButton
+            style="@style/TabButton" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/main_purple"/>
+
+        <com.clogic.veslo.View.Tab.TabButton
+            style="@style/TabButton" />
+    </com.clogic.veslo.View.Tab.TabHost>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.3"
+        android:background="@color/main_purple"/>
+</LinearLayout>

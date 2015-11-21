@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:id="@+id/th_host"
+        android:weightSum="5"
         android:orientation="horizontal">
 
         <com.clogic.veslo.View.Tab.TabButton
@@ -19,10 +20,12 @@
             style="@style/TabButton"
             app:iconSrc="@mipmap/tab_search"/>
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="글쓰기"/>
+            android:src="@mipmap/tab_write"
+            android:background="@null"
+            android:layout_weight="1"/>
 
         <com.clogic.veslo.View.Tab.TabButton
             style="@style/TabButton"

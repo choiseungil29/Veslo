@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.clogic.veslo.Fragment.NewsfeedFragment;
+import com.clogic.veslo.Fragment.ProfileFragment;
 import com.clogic.veslo.R;
 import com.clogic.veslo.View.Tab.TabButton;
 import com.clogic.veslo.View.Tab.TabHost;
@@ -85,8 +86,7 @@ public class MainActivity extends AppCompatActivity implements TabListener {
             list.add(new NewsfeedFragment());
             list.add(new NewsfeedFragment());
             list.add(new NewsfeedFragment());
-            list.add(new NewsfeedFragment());
-            list.add(new NewsfeedFragment());
+            list.add(new ProfileFragment());
         }
 
         @Override

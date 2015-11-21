@@ -35,10 +35,7 @@ public class NewsfeedFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_newsfeed, container, false);
-
         ButterKnife.bind(this, view);
-
-        // cardlist 초기화해주고 여기에 데이터 대입
 
         Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
         Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
@@ -48,7 +45,6 @@ public class NewsfeedFragment extends Fragment {
         NewsfeedAdapter adapter = new NewsfeedAdapter();
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext());
 
-        //rv_card.setHasFixedSize(true);
         rv_card.setLayoutManager(manager);
         rv_card.setAdapter(adapter);
 

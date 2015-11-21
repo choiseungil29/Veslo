@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.clogic.veslo.R;
@@ -16,7 +17,7 @@ import butterknife.ButterKnife;
 /**
  * Created by clogic on 2015. 11. 20..
  */
-public class TabButton extends RelativeLayout implements View.OnClickListener {
+public class TabButton extends LinearLayout implements View.OnClickListener {
 
     private boolean isActive;
 

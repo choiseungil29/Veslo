@@ -7,10 +7,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.clogic.veslo.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 /**
  * Created by clogic on 2015. 11. 18..
@@ -25,13 +27,11 @@ public class NewsfeedView extends LinearLayout {
     @Bind(R.id.tv_time) TextView tv_time;
 
     public NewsfeedView(Context context) {
-        super(context);
-        initView(context);
+        this(context, null);
     }
 
     public NewsfeedView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        initView(context);
+        this(context, attrs, 0);
     }
 
     public NewsfeedView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -44,6 +44,11 @@ public class NewsfeedView extends LinearLayout {
         li.inflate(R.layout.view_newsfeed, this, true);
 
         ButterKnife.bind(this);
+
+        Glide.with(context)
+                .load(R.mipmap.profile)
+                .bitmapTransform(new CropCircleTransformation(context))
+                .into(iv_profile);
     }
 
     public void setId(String id) {
