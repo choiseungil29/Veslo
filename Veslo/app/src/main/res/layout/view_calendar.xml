@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.clogic.veslo.View.Calendar.CLogicCalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:calendarTextSize="15sp"
+        app:calendarBackgroundColor="@android:color/white"
+        app:calendarTextColor="@android:color/black"
+        app:calendarTodayBackgroundColor="@color/main_purple"
+        app:calendarSelectedDayBackgroundColor="@color/main_down_purple"
+        app:calendarDaysNameBackgroundColor="@color/days_name_background"/>-->
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendar_view"
+        android:layout_width="fill_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="250dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="@android:color/white"
+        app:compactCalendarTextColor="@android:color/black"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/main_purple"
+        app:compactCalendarCurrentDayBackgroundColor="@color/main_purple" />
+</LinearLayout>

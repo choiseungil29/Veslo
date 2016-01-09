@@ -25,7 +25,7 @@
     <ImageView
         android:id="@+id/iv_selector"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tab_height"
+        android:layout_height="@dimen/tab_selector_height"
         android:layout_gravity="top"
         android:background="@color/main_purple"
         android:visibility="gone"/>

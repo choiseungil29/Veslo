@@ -58,7 +58,7 @@ public class TabButton extends LinearLayout implements View.OnClickListener {
 
         this.setOnClickListener(this);
     }
-
+ 
     public void setOnTabListener(TabListener listener) {
         this.listener = listener;
     }

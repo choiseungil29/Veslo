@@ -24,9 +24,22 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
 
     @Override
     public void run() {
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+
+        /**
+         * 여기서 로그인 검사.
+         */
+        Intent intent = null;
+        if (isLogin()) {
+            intent = new Intent(SplashActivity.this, MainActivity.class);
+        } else {
+            intent = new Intent(SplashActivity.this, LoginActivity.class);
+        }
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in, R.anim.step_back);
+    }
+
+    public boolean isLogin() {
+        return false;
     }
 }

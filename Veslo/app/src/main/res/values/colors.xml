@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="main_purple">#53508d</color>
+    <color name="main_purple">#53508D</color>
+    <color name="main_down_purple">#4F4D7E</color>
     <color name="down_purple">#DBDBE6</color>
+    <color name="main_transparent_white">#A1A1A1</color>
+    <color name="line_color">@color/main_transparent_white</color>
+    <color name="days_name_background">#F8F8F8</color>
 </resources>

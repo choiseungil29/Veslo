@@ -6,6 +6,8 @@ import android.content.pm.Signature;
 import android.util.Base64;
 import android.util.Log;
 
+import com.kakao.auth.AuthType;
+import com.kakao.auth.Session;
 import com.orm.SugarApp;
 import com.pixplicity.easyprefs.library.Prefs;
 
@@ -19,6 +21,8 @@ public class VesloApplication extends SugarApp {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Session.initialize(this, AuthType.KAKAO_TALK);
 
         new Prefs.Builder()
                 .setContext(this)

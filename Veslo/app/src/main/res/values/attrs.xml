@@ -4,4 +4,22 @@
     <declare-styleable name="TabButton">
         <attr name="iconSrc" format="reference|integer" />
     </declare-styleable>
+    
+    <declare-styleable name="CLogicCalendarView">
+        <attr name="calendarTextSize" format="reference|dimension" />
+        <attr name="calendarTextColor" format="reference|color" />
+        <attr name="calendarBackgroundColor" format="reference|color" />
+        <attr name="calendarTodayBackgroundColor" format="reference|color" />
+        <attr name="calendarSelectedDayBackgroundColor" format="reference|color" />
+        <attr name="calendarDaysNameBackgroundColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="CompactCalendarView">
+        <attr name="compactCalendarTextSize" format="dimension"/>
+        <attr name="compactCalendarBackgroundColor" format="color"/>
+        <attr name="compactCalendarCurrentDayBackgroundColor" format="color"/>
+        <attr name="compactCalendarCurrentSelectedDayBackgroundColor" format="color"/>
+        <attr name="compactCalendarTextColor" format="color"/>
+        <attr name="compactCalendarDaysNameBackgroundColor" format="reference|color" />
+    </declare-styleable>
 </resources>

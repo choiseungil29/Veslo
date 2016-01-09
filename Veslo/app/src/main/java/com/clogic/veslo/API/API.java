@@ -14,7 +14,7 @@ import retrofit.Retrofit;
  */
 public class API {
 
-    public static final String BASE_URL = "http://211.110.1.197";
+    public static final String BASE_URL = "http://veslo.herokuapp.com";
 
     private static Retrofit adapter;
     private static Retrofit.Builder builder;
@@ -36,7 +36,12 @@ public class API {
 
     private static void settingEndpoint(String PORT) {
         getInstance();
-        builder.baseUrl(BASE_URL + ":" + PORT);
+        builder.baseUrl(BASE_URL);
         adapter = builder.build();
     }
+
+    public static UserAPI getUserAPI() {
+        return getInstance().adapter.create(UserAPI.class);
+    }
+    public static PostAPI getPostAPI() { return getInstance().adapter.create(PostAPI.class); }
 }

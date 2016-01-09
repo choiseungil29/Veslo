@@ -1,5 +1,6 @@
 package com.clogic.veslo.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,9 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.clogic.veslo.Fragment.NewsfeedFragment;
 import com.clogic.veslo.Fragment.ProfileFragment;
+import com.clogic.veslo.Model.Feed;
 import com.clogic.veslo.R;
+import com.clogic.veslo.Util.Provider;
 import com.clogic.veslo.View.Tab.TabButton;
-import com.clogic.veslo.View.Tab.TabHost;
+import com.clogic.veslo.View.Tab.CLogicTabHost;
 import com.clogic.veslo.View.Tab.TabListener;
 
 import java.util.ArrayList;
@@ -19,6 +22,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by clogic on 2015. 11. 14..
@@ -26,13 +30,19 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements TabListener {
 
     @Bind(R.id.vp_main) ViewPager pager;
-    @Bind(R.id.th_host) TabHost tabHost;
+    @Bind(R.id.th_host)
+    CLogicTabHost tabHost;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        Provider.getInstance().addNewsfeed(new Feed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991", R.mipmap.profile));
+        Provider.getInstance().addNewsfeed(new Feed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991", R.mipmap.profile));
+        Provider.getInstance().addNewsfeed(new Feed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991", R.mipmap.profile));
+        Provider.getInstance().addNewsfeed(new Feed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991", R.mipmap.ic_launcher));
 
         tabHost.setOnTabListener(this);
 
@@ -74,6 +84,12 @@ public class MainActivity extends AppCompatActivity implements TabListener {
     @Override
     public void onTabUnselected(TabButton tabButton) {
 
+    }
+
+    @OnClick(R.id.btn_create_post)
+    public void intentCreatePostActivity() {
+        Intent intent = new Intent(this, CreatePostActivity.class);
+        startActivity(intent);
     }
 
     public class ViewPagerAdapter extends FragmentPagerAdapter {

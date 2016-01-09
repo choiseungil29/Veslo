@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Veslo</string>
+    <string name="google_maps_api_key">AIzaSyCCA52SO1aMpEtIJ5vJKWUGO19G3xhTNQM</string>
+    <string name="kakao_api_key">da478d9cb639edcf862cc9b997960753</string>
 </resources>

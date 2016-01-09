@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.clogic.veslo.Adapter.NewsfeedAdapter;
+import com.clogic.veslo.Adapter.FeedAdapter;
 import com.clogic.veslo.R;
-import com.clogic.veslo.Util.Newsfeed;
+import com.clogic.veslo.Model.Feed;
 import com.clogic.veslo.Util.Provider;
 
 import butterknife.Bind;
@@ -37,12 +37,7 @@ public class NewsfeedFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_newsfeed, container, false);
         ButterKnife.bind(this, view);
 
-        Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
-        Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
-        Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
-        Provider.getInstance().addNewsfeed(new Newsfeed("clogic", "2015/11/03", "ㅁㄴㅇㅁㄴㅇㅁㄴㅇ", "1,991"));
-
-        NewsfeedAdapter adapter = new NewsfeedAdapter();
+        FeedAdapter adapter = new FeedAdapter();
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext());
 
         rv_card.setLayoutManager(manager);
